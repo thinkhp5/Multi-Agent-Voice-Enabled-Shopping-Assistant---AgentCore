@@ -1,0 +1,7 @@
+mcp<2.0
+bedrock-agentcore
+bedrock-agentcore-starter-toolkit
+langchain-core
+langchain-aws
+langchain-openai
+python-dotenv

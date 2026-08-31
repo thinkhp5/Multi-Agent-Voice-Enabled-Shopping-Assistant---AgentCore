@@ -1,0 +1,9 @@
+bedrock-agentcore
+bedrock-agentcore-starter-toolkit
+langgraph
+langchain-core
+langchain-mcp-adapters
+langchain-aws
+langchain-openai
+python-dotenv
+pydantic
