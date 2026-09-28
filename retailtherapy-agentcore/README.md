@@ -35,51 +35,8 @@ This project is designed as a practical example of how to build and deploy a pro
 
 At a high level, the application follows this flow:
 
-```text
-                           ┌─────────────────────┐
-                           │       User          │
-                           │ Text / Voice Input  │
-                           └──────────┬──────────┘
-                                      │
-                                      ▼
-                           ┌─────────────────────┐
-                           │  AgentCore Runtime  │
-                           │    runtime_app.py   │
-                           └──────────┬──────────┘
-                                      │
-                                      ▼
-                           ┌─────────────────────┐
-                           │     Orchestrator    │
-                           │     LangGraph Node  │
-                           └──────────┬──────────┘
-                                      │
-                    ┌─────────────────┼─────────────────┐
-                    │                 │                 │
-                    ▼                 │                 ▼
-          ┌──────────────────┐       │       ┌──────────────────┐
-          │  Product Agent   │       │       │  Support Agent   │
-          │                  │       │       │                  │
-          │ Product search   │       │       │ Order tracking   │
-          │ Recommendations  │       │       │ Returns          │
-          │ Catalog RAG      │       │       │ Escalation       │
-          └────────┬─────────┘       │       └────────┬─────────┘
-                   │                 │                │
-                   └─────────────────┼────────────────┘
-                                     │
-                                     ▼
-                           ┌─────────────────────┐
-                           │     Synthesizer     │
-                           │                     │
-                           │ Combines specialist│
-                           │ responses when     │
-                           │ multiple agents run│
-                           └──────────┬──────────┘
-                                      │
-                                      ▼
-                           ┌─────────────────────┐
-                           │   Final Response    │
-                           └─────────────────────┘
-```
+<img width="611" height="756" alt="image" src="https://github.com/user-attachments/assets/7fc22845-9a1a-4463-a4fc-8f49d298dda0" />
+
 
 ---
 
