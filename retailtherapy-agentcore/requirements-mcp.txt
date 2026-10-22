@@ -3,5 +3,5 @@ bedrock-agentcore
 bedrock-agentcore-starter-toolkit
 langchain-core
 langchain-aws
-langchain-openai
 python-dotenv
+boto3
