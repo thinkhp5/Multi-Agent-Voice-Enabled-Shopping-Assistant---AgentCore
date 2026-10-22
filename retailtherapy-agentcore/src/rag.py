@@ -31,7 +31,7 @@ def get_vector_store() -> InMemoryVectorStore:
 
     docs = [
         Document(
-            page_content=f"{p['name']} — {p['description']} (${'{'}p['price']{'}'})",
+            page_content=f"{p['name']} — {p['description']} (${p['price']})",
             metadata=p,
         )
         for p in PRODUCT_CATALOG
