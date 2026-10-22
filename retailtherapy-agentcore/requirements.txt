@@ -4,6 +4,9 @@ langgraph
 langchain-core
 langchain-mcp-adapters
 langchain-aws
-langchain-openai
 python-dotenv
 pydantic
+boto3
+numpy
+sounddevice
+soundfile
