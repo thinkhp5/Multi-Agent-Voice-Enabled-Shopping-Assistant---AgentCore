@@ -1,29 +1,25 @@
 """
 Vector store for product catalog semantic search.
 
-Lives on the MCP server side now (not the agent side) — the agent no
-longer needs to know how product search is implemented, only that a
-`search_product_catalog` tool exists.
+Lives on the MCP server side — the agent only needs to know that a
+search_product_catalog tool exists. Embeddings are provided by Amazon Bedrock.
 """
 from langchain_core.documents import Document
 from langchain_core.vectorstores import InMemoryVectorStore
 
-from src.config import AWS_REGION, MODEL_PROVIDER
+from src.config import AWS_REGION
 from src.data import PRODUCT_CATALOG
 
 _vector_store = None
 
 
 def _get_embeddings():
-    if MODEL_PROVIDER == "openai":
-        from langchain_openai import OpenAIEmbeddings
-
-        return OpenAIEmbeddings(model="text-embedding-3-small")
-
+    """Create the AWS-native Amazon Titan text embeddings client."""
     from langchain_aws import BedrockEmbeddings
 
     return BedrockEmbeddings(
-        model_id="amazon.titan-embed-text-v2:0", region_name=AWS_REGION
+        model_id="amazon.titan-embed-text-v2:0",
+        region_name=AWS_REGION,
     )
 
 
